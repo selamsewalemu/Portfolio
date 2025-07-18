@@ -1,0 +1,80 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 13pt;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 35%;
+  background-color: #0ef; /* Light Steel Blue */
+  padding: 2rem;
+  color: #222;
+}
+
+.profile-pic {
+      width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+.sidebar section {
+  margin-bottom: 1.5rem;
+}
+
+/* RIGHT MAIN CONTENT */
+.main-content {
+  width: 60%;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+/* Titles */
+h1, h2, h3 {
+  font-size: 15pt;
+  color: #f52121;
+  margin-top: 1.5rem;
+}
+
+h2 a, h3 a {
+  color: #f8172a;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+h2 a:hover, h3 a:hover {
+  color: #bb00cc;
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+a {
+  color: #003366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #005599;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 13pt;
+}
