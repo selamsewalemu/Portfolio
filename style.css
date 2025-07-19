@@ -17,9 +17,10 @@ body {
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color:rgb(8, 241, 183);
+  background-color: rgb(8, 241, 183);
   padding: 1rem 2rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -29,6 +30,8 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
 }
 
 .navbar a {
@@ -53,6 +56,7 @@ body {
   border-radius: 16px;
   margin-bottom: 2rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
 }
 
 .hero-left {
@@ -63,10 +67,12 @@ body {
   color: #00020c;
   margin-bottom: 0.2rem;
 }
+
 .hero-left h3 {
   color: rgb(8, 1, 15);
   margin-bottom: auto;
 }
+
 .hero-right {
   display: flex;
   flex-direction: column;
@@ -84,6 +90,7 @@ body {
   box-shadow: 0 6px 20px rgba(255, 165, 0, 0.3);
   animation: float 4s ease-in-out infinite;
 }
+
 .profile-pic {
   width: 180px;
   height: 200px;
@@ -101,7 +108,7 @@ body {
 
 .profile-info p {
   font-size: 1.23rem;
-  color:black;
+  color: black;
   margin: 0;
 }
 
@@ -140,5 +147,49 @@ footer {
   }
   50% {
     transform: translateY(-8px);
+  }
+}
+
+/* ----------- Responsive for mobile phones ----------- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-left h3 {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.2rem;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 160px;
+  }
+
+  .profile-info h2 {
+    font-size: 1rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
   }
 }
