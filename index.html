@@ -2,53 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selamsew Alemu Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .btn {
-      background-color: #ff914d;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #ff6f00;
-    }
-
-    .center-text {
-      text-align: center;
-    }
-
-    #scrollTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #e64210;
-      color: white;
-      padding: 10px 14px;
-      border: none;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-  </style>
 </head>
 <body>
 
@@ -66,7 +22,6 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <!-- Profile -->
     <div class="hero-left">
       <div class="profile-wrapper">
         <img src="selamsew photo.jpg" alt="Selamsew Alemu" class="profile-pic" />
@@ -76,12 +31,10 @@
         </div>
       </div>
     </div>
-
-    <!-- Bio Info -->
     <div class="hero-right">
       <h1>I am Selamsew Alemu</h1>
       <h3>
-        Graduated from Debre Markos University<br />
+        Graduated from Debre Markos University in <br />
         Electrical and Computer Engineering (Computer Stream) <br />
         July 05, 2024 G.C
       </h3>
@@ -89,7 +42,7 @@
   </header>
 
   <!-- About Me -->
-  <section id="about" class="fade-in">
+  <section id="about" class="fade-section">
     <h2>About Me</h2>
     <p>
       I have strong skills in software development, frontend technologies, database management and troubleshooting, as well as network installation and configuration.
@@ -103,7 +56,7 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="fade-in">
+  <section id="skills" class="fade-section">
     <h2>Skills</h2>
     <ul>
       <li><strong>Programming:</strong> C++, Java, Python, HTML, MATLAB</li>
@@ -116,7 +69,7 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="fade-in">
+  <section id="projects" class="fade-section">
     <h2>Projects</h2>
     <ul>
       <li>Budget Expense Management System – DMU</li>
@@ -126,43 +79,24 @@
   </section>
 
   <!-- CV -->
-  <section id="cv" class="fade-in center-text">
+  <section id="cv" class="fade-section center-text">
     <h2>Curriculum Vitae</h2>
     <a class="btn" href="CV 1Only.pdf" target="_blank">📄 View My Full CV (PDF)</a>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="fade-in center-text">
+  <section id="contact" class="fade-section center-text">
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:selamsewadmu@gmail.com">selamsewadmu@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/selamsewalemu" target="_blank">github.com/selamsewalemu</a></p>
     <p>Phone: <a href="tel:+251915504626">+251 915-504-626</a></p>
   </section>
 
-  <!-- Scroll To Top Button -->
-  <button id="scrollTopBtn" title="Go to top">↑</button>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Selamsew Alemu. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll Top Script -->
-  <script>
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-    window.onscroll = () => {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
-      }
-    };
-
-    scrollTopBtn.onclick = () => {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
