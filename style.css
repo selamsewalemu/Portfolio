@@ -14,6 +14,7 @@ body {
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease-in-out;
 }
 
 /* Navbar */
@@ -68,6 +69,7 @@ body {
   margin-bottom: 2rem;
   gap: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .hero-left {
@@ -78,6 +80,7 @@ body {
   color: #220700;
   font-size: 2rem;
   margin-bottom: 0.8rem;
+  animation: fadeInDown 1s ease;
 }
 
 .hero-left h3 {
@@ -103,6 +106,11 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.profile-wrapper:hover {
+  transform: translateY(-5px);
 }
 
 .profile-pic {
@@ -128,7 +136,7 @@ body {
   text-align: center;
 }
 
-/* Sections (About, Skills, Projects, CV, Contact) */
+/* Sections */
 section {
   background-color: white;
   padding: 2rem;
@@ -154,16 +162,6 @@ ul li {
   margin-bottom: 0.6rem;
 }
 
-/* Links */
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -175,7 +173,18 @@ footer {
   color: #555;
 }
 
-/* Float Animation */
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+/* Animations */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -185,10 +194,21 @@ footer {
   }
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse; /* Reverse to show image first */
     padding: 2rem;
     text-align: center;
   }
