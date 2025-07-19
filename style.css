@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -12,26 +11,30 @@ body {
   color: #222;
   max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 100px 20px 20px; /* Added top padding to prevent content hiding behind fixed navbar */
   border: 1px solid #ccc;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* Navbar - Now Fixed */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #00e0ff, #00c2cb);
   padding: 1.2rem 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
 }
 
 .navbar h1 {
@@ -45,7 +48,6 @@ body {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
 }
 
 .navbar a {
@@ -76,8 +78,10 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Reverse Image & Text Layout */
 .hero-left {
   flex: 1;
+  order: 2;
 }
 
 .hero-left h1 {
@@ -93,8 +97,9 @@ body {
   line-height: 1.5;
 }
 
-/* Profile Area */
 .hero-right {
+  flex: 1;
+  order: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +145,7 @@ body {
   text-align: center;
 }
 
-/* Sections */
+/* Section Styling */
 section {
   background-color: white;
   padding: 2rem;
@@ -209,7 +214,7 @@ a:hover {
   }
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
@@ -221,8 +226,6 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    position: sticky;
-    top: 0;
   }
 
   .navbar h1 {
