@@ -16,6 +16,11 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
+
+  /* === Slide Effect === */
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 /* ===================== Navbar - Fixed ===================== */
@@ -77,6 +82,10 @@ body {
   gap: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+
+  /* === Slide Alignment === */
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* ===================== Hero Left (Text) ===================== */
@@ -160,14 +169,12 @@ section {
   margin-bottom: 2rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   border-left: 6px solid #b85c38;
-  display: none;
   transition: opacity 0.5s ease;
   position: relative;
-}
 
-section.active {
-  display: block;
-  animation: slideIn 0.7s ease-in-out;
+  /* === Slide Styling === */
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* ===================== Section Titles ===================== */
@@ -204,6 +211,8 @@ footer {
   margin-top: 2rem;
   font-size: 0.95rem;
   color: #555;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* ===================== Links ===================== */
