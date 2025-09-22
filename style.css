@@ -3,18 +3,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
 }
 
 body {
   background: linear-gradient(to bottom right, #f0f0f0, #d4f1f4);
   color: #222;
-  max-width: 100%; /* allow full width */
+  max-width: 100%;
   margin: auto;
-  padding: 70px 15px 15px;
+  padding: 70px 20px 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 15px rgba(0,0,0,0.08);
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
+  font-size: 1.05rem;          /* Professional body text */
+  line-height: 1.6;            /* More readable */
+  letter-spacing: 0.5px;
 }
 
 /* Navbar */
@@ -24,62 +28,133 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1200px; /* slightly wider for bigger screens */
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right,#00e0ff,#00c2cb);
   padding: 1rem 1.5rem;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   z-index: 999;
 }
 
-.navbar h1 { font-size: 1.8rem; color: #fff; font-weight:bold; }
-.navbar ul { list-style:none; display:flex; gap:1.2rem; flex-wrap:wrap; }
-.navbar a { text-decoration:none; color:#062e3f; font-weight:bold; border-bottom:2px solid transparent; transition:color 0.3s ease, border-bottom 0.3s ease; cursor:pointer; }
-.navbar a:hover, .navbar a.active { color:#fff; border-bottom:2px solid #fff; }
+.navbar h1 { 
+  font-size: 2rem; 
+  color: #fff; 
+  font-weight: 900;  /* Strong, professional look */
+  letter-spacing: 1px;
+}
+.navbar ul { 
+  list-style:none; 
+  display:flex; 
+  gap:1.5rem; 
+  flex-wrap:wrap; 
+}
+.navbar a { 
+  text-decoration:none; 
+  color:#062e3f; 
+  font-weight:700; 
+  border-bottom:2px solid transparent; 
+  transition:color 0.3s ease, border-bottom 0.3s ease; 
+  cursor:pointer; 
+  letter-spacing:0.5px;
+}
+.navbar a:hover, .navbar a.active { 
+  color:#fff; 
+  border-bottom:2px solid #fff; 
+}
 
 /* Hero */
 .hero {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:2.5rem; background:linear-gradient(to right,#ff6a00,#ffd8a9);
-  border:3px dashed #b84f00; border-radius:16px; margin-bottom:2rem; gap:1.5rem;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+  padding:3rem; 
+  background:linear-gradient(to right,#ff6a00,#ffd8a9);
+  border:3px dashed #b84f00; 
+  border-radius:18px; 
+  margin-bottom:2rem; 
+  gap:2rem;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 .hero-left { flex:1; order:1; }
-.hero-left h1 { color:#220700; font-size:2rem; margin-bottom:0.5rem; font-weight:bold; cursor:pointer; }
+.hero-left h1 { 
+  color:#220700; 
+  font-size:2.3rem; 
+  margin-bottom:0.5rem; 
+  font-weight:900; 
+  cursor:pointer; 
+  letter-spacing:1px;
+}
 .hero-left h1:hover { color:#ff6600; }
-.hero-left h3 { color:#2a0c00; font-size:1.1rem; line-height:1.5; }
+.hero-left h3 { 
+  color:#2a0c00; 
+  font-size:1.2rem; 
+  line-height:1.6; 
+  font-weight:500;
+  letter-spacing:0.5px;
+}
 .hero-right { flex:1; order:2; display:flex; justify-content:flex-end; }
-.profile-wrapper { display:flex; flex-direction:column; align-items:center; padding:1.2rem; background:#d7f9ff; border:3px solid #0077ff; border-radius:20px; box-shadow:0 6px 25px rgba(0,0,0,0.25); animation:float 4s ease-in-out infinite; transition:transform 0.3s ease; }
-.profile-wrapper:hover { transform:translateY(-6px); }
-.profile-pic { width:180px; height:200px; border-radius:50%; object-fit:cover; border:3px solid #ff8c00; margin-bottom:1rem; }
-.profile-info h2 { font-size:1.4rem; color:#e64a19; margin-bottom:0.4rem; text-align:center; font-weight:bold; }
-.profile-info p { font-size:1.1rem; color:#111; text-align:center; }
+.profile-wrapper { 
+  display:flex; flex-direction:column; align-items:center; 
+  padding:1.5rem; 
+  background:#d7f9ff; 
+  border:3px solid #0077ff; 
+  border-radius:22px; 
+  box-shadow:0 8px 25px rgba(0,0,0,0.25); 
+  animation:float 4s ease-in-out infinite; 
+  transition:transform 0.3s ease; 
+}
+.profile-wrapper:hover { transform:translateY(-7px); }
+.profile-pic { width:190px; height:210px; border-radius:50%; object-fit:cover; border:3px solid #ff8c00; margin-bottom:1rem; }
+.profile-info h2 { font-size:1.5rem; color:#e64a19; margin-bottom:0.5rem; text-align:center; font-weight:800; letter-spacing:0.8px; }
+.profile-info p { font-size:1.1rem; color:#111; text-align:center; line-height:1.6; letter-spacing:0.5px; }
 
 /* Sections */
 section {
   display:none;
-  background-color:white; padding:1.5rem; border-radius:12px; margin-bottom:2rem;
-  box-shadow:0 3px 12px rgba(0,0,0,0.05); border-left:5px solid #b85c38;
+  background-color:white; 
+  padding:1.8rem; 
+  border-radius:14px; 
+  margin-bottom:2rem;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08); 
+  border-left:5px solid #b85c38;
   opacity:0; transform:translateX(-80%); transition:all 0.6s ease-in-out;
 }
-section.active {
-  display:block;
-  opacity:1; transform:translateX(0);
-}
+section.active { display:block; opacity:1; transform:translateX(0); }
 
 /* Section Titles */
-section h2 { margin-bottom:0.8rem; color:#b85c38; font-size:1.6rem; font-weight:bold; cursor:pointer; }
+section h2 { 
+  margin-bottom:0.8rem; 
+  color:#b85c38; 
+  font-size:1.8rem; 
+  font-weight:900; 
+  cursor:pointer; 
+  letter-spacing:0.8px;
+}
 section h2:hover { color:#ff6600; }
-section p, section li { margin-bottom:0.8rem; font-size:1.05rem; line-height:1.5; }
+section p, section li { 
+  margin-bottom:0.8rem; 
+  font-size:1.05rem; 
+  line-height:1.6; 
+  letter-spacing:0.5px;
+}
 
 /* Footer */
-footer { text-align:center; padding:1rem; background-color:#fff4e6; border-radius:8px; margin-top:2rem; font-size:1rem; color:#555; }
+footer { 
+  text-align:center; 
+  padding:1rem; 
+  background-color:#fff4e6; 
+  border-radius:8px; 
+  margin-top:2rem; 
+  font-size:1rem; 
+  color:#555; 
+  letter-spacing:0.5px;
+}
 
 /* Links */
-a { color:#0066cc; text-decoration:none; transition:color 0.3s ease; }
+a { color:#0066cc; text-decoration:none; transition:color 0.3s ease; letter-spacing:0.5px; }
 a:hover { color:#ff6600; text-decoration:underline; }
 
 /* Animations */
@@ -88,16 +163,16 @@ a:hover { color:#ff6600; text-decoration:underline; }
 /* Responsive */
 @media (max-width:1024px){
   .navbar { max-width:100%; flex-direction:column; align-items:flex-start; padding:0.8rem 1rem; }
-  .navbar h1{font-size:1.5rem;} .navbar ul{justify-content:center;padding-top:0.5rem; width:100%; gap:0.8rem;}
-  .hero { flex-direction:column; padding:2rem; text-align:center; gap:1.2rem; }
+  .navbar h1{font-size:1.8rem;} .navbar ul{justify-content:center;padding-top:0.5rem; width:100%; gap:1rem;}
+  .hero { flex-direction:column; padding:2.5rem; text-align:center; gap:1.5rem; }
   .hero-left { order:2; } .hero-right { order:1; justify-content:center; margin-bottom:1rem; }
-  .hero-left h1{font-size:1.6rem;} .hero-left h3{font-size:1.05rem;}
-  section{padding:1rem;} .profile-wrapper{padding:1rem;} .profile-pic{width:150px;height:170px;}
-  .profile-info h2{font-size:1.2rem;} .profile-info p{font-size:1rem;} section p,section li{line-height:1.4;font-size:1rem;} section h2{font-size:1.3rem;}
+  .hero-left h1{font-size:2rem;} .hero-left h3{font-size:1.15rem;}
+  section{padding:1.5rem;} .profile-wrapper{padding:1.2rem;} .profile-pic{width:160px;height:180px;}
+  .profile-info h2{font-size:1.3rem;} .profile-info p{font-size:1.05rem;} section p,section li{line-height:1.5;font-size:1rem;} section h2{font-size:1.5rem;}
 }
 @media (max-width:768px){
   body { padding:65px 10px 10px; }
-  .hero-left h1{font-size:1.4rem;} .hero-left h3{font-size:1rem;}
-  .profile-pic{width:130px;height:150px;} .profile-info h2{font-size:1.1rem;} .profile-info p{font-size:0.95rem;}
-  section p, section li{font-size:0.9rem; line-height:1.3;} section h2{font-size:1.1rem;}
+  .hero-left h1{font-size:1.6rem;} .hero-left h3{font-size:1rem;}
+  .profile-pic{width:130px;height:150px;} .profile-info h2{font-size:1.2rem;} .profile-info p{font-size:0.95rem;}
+  section p, section li{font-size:0.95rem; line-height:1.4;} section h2{font-size:1.3rem;}
 }
