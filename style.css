@@ -46,7 +46,8 @@ body {
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #ffcc00;
 }
 
@@ -117,14 +118,14 @@ body {
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.6s ease-in-out;
-  padding: 12px 15px; /* smaller padding */
+  padding: 12px 15px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   margin-bottom: 20px;
-  width: fit-content;        /* ✅ container fits width of text */
-  max-width: 100%;           /* keeps responsive */
-  height: auto;              /* ✅ container fits height of text */
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
 }
 
 .slide.active {
@@ -194,4 +195,25 @@ footer {
   padding: 10px;
   margin-top: 20px;
   font-size: 0.85rem;
+}
+
+/* ===================== Responsive - Mobile ===================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .hero-left, .hero-right {
+    max-width: 100%;
+  }
+  
+  .slide-container {
+    margin-top: 320px; /* adjust for mobile */
+  }
+
+  .slide {
+    width: 95%;
+  }
 }
