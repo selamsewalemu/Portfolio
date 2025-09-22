@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navbar a");
-  const allSections = document.querySelectorAll("main .slide"); // select only slide sections
+  const sections = document.querySelectorAll("main section"); // only main sections
 
-  navLinks.forEach((link) => {
+  navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
       const targetId = link.getAttribute("href").replace("#", "");
 
-      allSections.forEach((section) => {
+      // Remove active from all sections, add to target
+      sections.forEach(section => {
         if (section.id === targetId) {
-          // activate the target slide
           section.classList.add("active");
         } else {
-          // hide other slides
           section.classList.remove("active");
         }
       });
@@ -24,14 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
-      // Update active link style
-      navLinks.forEach((nav) => nav.classList.remove("active"));
+      // Update active link
+      navLinks.forEach(nav => nav.classList.remove("active"));
       link.classList.add("active");
     });
   });
-
-  // Initially show the first section
-  if (allSections.length > 0) {
-    allSections[0].classList.add("active");
-  }
 });
