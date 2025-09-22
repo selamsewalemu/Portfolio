@@ -14,6 +14,7 @@ body {
   border: 1px solid #ccc;
   box-shadow: 0 0 15px rgba(0,0,0,0.08);
   scroll-behavior: smooth;
+  font-size: 14px; /* body text 14px */
 }
 
 /* ================= Navbar ================= */
@@ -54,9 +55,9 @@ body {
 }
 
 .hero-left { flex:1; order:1; }
-.hero-left h1 { font-size:1.8rem; margin-bottom:0.5rem; font-weight:bold; color:#220700; cursor:pointer; }
+.hero-left h1 { font-size:16px; margin-bottom:0.5rem; font-weight:bold; color:#220700; cursor:pointer; }
 .hero-left h1:hover { color:#ff6600; }
-.hero-left h3 { font-size:1rem; line-height:1.5; color:#2a0c00; }
+.hero-left h3 { font-size:14px; line-height:1.5; color:#2a0c00; }
 
 .hero-right { flex:1; order:2; display:flex; justify-content:flex-end; }
 .profile-wrapper {
@@ -67,8 +68,8 @@ body {
 }
 .profile-wrapper:hover { transform:translateY(-5px); }
 .profile-pic { width:160px; height:180px; border-radius:50%; object-fit:cover; border:3px solid #ff8c00; margin-bottom:0.8rem; }
-.profile-info h2 { font-size:1.3rem; color:#e64a19; text-align:center; margin-bottom:0.3rem; font-weight:bold; }
-.profile-info p { font-size:1rem; text-align:center; color:#111; }
+.profile-info h2 { font-size:16px; color:#e64a19; text-align:center; margin-bottom:0.3rem; font-weight:bold; }
+.profile-info p { font-size:14px; text-align:center; color:#111; }
 
 /* ================= Sections ================= */
 section {
@@ -91,12 +92,12 @@ section.active {
 }
 
 /* Section Titles */
-section h2 { font-size:1.4rem; font-weight:bold; margin-bottom:0.8rem; color:#b85c38; cursor:pointer; }
+section h2 { font-size:16px; font-weight:bold; margin-bottom:0.8rem; color:#b85c38; cursor:pointer; }
 section h2:hover { color:#ff6600; }
-section p, section li { font-size:1rem; line-height:1.5; margin-bottom:0.6rem; }
+section p, section li { font-size:14px; line-height:1.5; margin-bottom:0.6rem; }
 
 /* Footer */
-footer { text-align:center; padding:0.8rem; background:#fff4e6; border-radius:8px; margin-top:1.5rem; font-size:0.95rem; color:#555; }
+footer { text-align:center; padding:0.8rem; background:#fff4e6; border-radius:8px; margin-top:1.5rem; font-size:14px; color:#555; }
 
 /* Links */
 a { color:#0066cc; text-decoration:none; transition:0.3s; }
@@ -107,18 +108,18 @@ a:hover { color:#ff6600; text-decoration:underline; }
 
 /* ================= Responsive ================= */
 @media (max-width:768px) {
-  body { padding:70px 10px 10px; }
+  body { padding:70px 10px 10px; font-size:14px; }
 
   .hero { flex-direction:column; padding:1.5rem; gap:1rem; text-align:center; }
   .hero-left { order:2; } .hero-right { order:1; justify-content:center; margin-bottom:1rem; }
-  .hero-left h1 { font-size:1.5rem; } .hero-left h3 { font-size:0.95rem; }
+  .hero-left h1 { font-size:16px; } .hero-left h3 { font-size:14px; }
   .profile-wrapper { padding:0.8rem; } .profile-pic { width:130px; height:150px; }
-  .profile-info h2 { font-size:1.1rem; } .profile-info p { font-size:0.9rem; }
+  .profile-info h2 { font-size:16px; } .profile-info p { font-size:14px; }
 
   section { padding:1rem; }
-  section h2 { font-size:1.2rem; }
-  section p, section li { font-size:0.95rem; line-height:1.4; }
+  section h2 { font-size:16px; }
+  section p, section li { font-size:14px; line-height:1.4; }
 
   .navbar { flex-direction:column; align-items:flex-start; padding:0.6rem 1rem; }
-  .navbar h1 { font-size:1.3rem; } .navbar ul { justify-content:center; width:100%; gap:0.5rem; }
+  .navbar h1 { font-size:16px; } .navbar ul { justify-content:center; width:100%; gap:0.5rem; }
 }
