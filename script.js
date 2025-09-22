@@ -1,44 +1,32 @@
-// script.js
+<script>
+  // Smooth scroll for all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeSections = document.querySelectorAll(".fade-section");
-  const navLinks = document.querySelectorAll(".navbar a");
-  const allSections = document.querySelectorAll("section");
-
-  // Intersection animation for fade-ins
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  fadeSections.forEach((section) => observer.observe(section));
-
-  // Section slide switcher
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
       e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
 
-      const targetId = link.getAttribute("href").replace("#", "");
+  // Highlight active link on scroll
+  const sections = document.querySelectorAll('section, header');
 
-      allSections.forEach((section) => {
-        if (section.id === targetId) {
-          section.classList.add("active");
-        } else {
-          section.classList.remove("active");
-        }
-      });
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 110; // offset for navbar
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
 
-      // Optional: Scroll smoothly to the section
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: "smooth" });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
       }
     });
   });
-});
+</script>
