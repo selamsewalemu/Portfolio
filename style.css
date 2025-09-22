@@ -1,4 +1,3 @@
-/* ===================== Reset & Base Styling ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +10,14 @@ body {
   color: #222;
   max-width: 1000px;
   margin: auto;
-  padding: 70px 15px 15px;
+  padding: 80px 15px 20px;
   border: 1px solid #ccc;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-  font-size: 14px;
-  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
   scroll-behavior: smooth;
+  font-size: 14px; /* body text 14px */
 }
 
-/* ===================== Navbar - Fixed ===================== */
+/* ================= Navbar ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,290 +28,98 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #00e0ff, #00c2cb);
-  padding: 0.8rem 1.2rem;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(to right,#00e0ff,#00c2cb);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   z-index: 999;
 }
 
-.navbar h1 {
-  font-size: 16px;
-  color: #062e3f;
-  font-weight: bold;
-}
+.navbar h1 { font-size:1.6rem; color:#062e3f; font-weight:bold; }
+.navbar ul { list-style:none; display:flex; gap:1rem; flex-wrap:wrap; }
+.navbar a { text-decoration:none; color:#062e3f; font-weight:bold; border-bottom:2px solid transparent; transition:0.3s; cursor:pointer; }
+.navbar a:hover, .navbar a.active { color:#fff; border-bottom:2px solid #fff; }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #062e3f;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  cursor: pointer;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: #ffffff;
-  border-bottom: 2px solid white;
-}
-
-/* ===================== Hero Section ===================== */
+/* ================= Hero / Profile ================= */
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background: linear-gradient(to right, #ff6a00, #ffd8a9);
-  border: 3px dashed #b84f00;
-  border-radius: 16px;
-  margin-bottom: 1.5rem;
-  gap: 1.2rem;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:2rem;
+  background:linear-gradient(to right,#ff6a00,#ffd8a9);
+  border:3px dashed #b84f00;
+  border-radius:16px;
+  margin-bottom:2rem;
+  gap:1.5rem;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
 }
 
-/* ===================== Hero Left (Text) ===================== */
-.hero-left {
-  flex: 1;
-  order: 1;
-}
+.hero-left { flex:1; order:1; }
+.hero-left h1 { font-size:16px; margin-bottom:0.5rem; font-weight:bold; color:#220700; cursor:pointer; }
+.hero-left h1:hover { color:#ff6600; }
+.hero-left h3 { font-size:14px; line-height:1.5; color:#2a0c00; }
 
-.hero-left h1 {
-  color: #220700;
-  font-size: 16px;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.hero-left h1:hover {
-  color: #ff6600;
-}
-
-.hero-left h3 {
-  color: #2a0c00;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* ===================== Hero Right (Profile) ===================== */
-.hero-right {
-  flex: 1;
-  order: 2;
-  display: flex;
-  justify-content: flex-end;
-}
-
+.hero-right { flex:1; order:2; display:flex; justify-content:flex-end; }
 .profile-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  background: #d7f9ff;
-  border: 3px solid #0077ff;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  animation: float 4s ease-in-out infinite;
-  transition: transform 0.3s ease;
+  display:flex; flex-direction:column; align-items:center;
+  padding:1rem; background:#d7f9ff; border:3px solid #0077ff;
+  border-radius:20px; box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  animation:float 4s ease-in-out infinite; transition:transform 0.3s ease;
 }
+.profile-wrapper:hover { transform:translateY(-5px); }
+.profile-pic { width:160px; height:180px; border-radius:50%; object-fit:cover; border:3px solid #ff8c00; margin-bottom:0.8rem; }
+.profile-info h2 { font-size:16px; color:#e64a19; text-align:center; margin-bottom:0.3rem; font-weight:bold; }
+.profile-info p { font-size:14px; text-align:center; color:#111; }
 
-.profile-wrapper:hover {
-  transform: translateY(-5px);
-}
-
-.profile-pic {
-  width: 160px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ff8c00;
-  margin-bottom: 0.8rem;
-}
-
-.profile-info h2 {
-  font-size: 16px;
-  color: #e64a19;
-  margin-bottom: 0.3rem;
-  text-align: center;
-  font-weight: bold;
-}
-
-.profile-info p {
-  font-size: 14px;
-  color: #111;
-  margin: 0;
-  text-align: center;
-}
-
-/* ===================== Section Styling ===================== */
+/* ================= Sections ================= */
 section {
-  background-color: white;
-  padding: 1rem 1.2rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  border-left: 5px solid #b85c38;
-  display: none;
-  position: relative;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
+  display:none;
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  margin-bottom:2rem;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  border-left:5px solid #b85c38;
+  opacity:0;
+  transform:translateX(-80%);
+  transition:all 0.6s ease-in-out;
 }
 
-/* ===================== Slide Animation ===================== */
 section.active {
-  display: block;
-  animation-name: slideInRight;
+  display:block;
+  opacity:1;
+  transform:translateX(0);
 }
 
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+/* Section Titles */
+section h2 { font-size:16px; font-weight:bold; margin-bottom:0.8rem; color:#b85c38; cursor:pointer; }
+section h2:hover { color:#ff6600; }
+section p, section li { font-size:14px; line-height:1.5; margin-bottom:0.6rem; }
 
-/* ===================== Section Titles ===================== */
-section h2 {
-  margin-bottom: 0.6rem;
-  color: #b85c38;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* Footer */
+footer { text-align:center; padding:0.8rem; background:#fff4e6; border-radius:8px; margin-top:1.5rem; font-size:14px; color:#555; }
 
-section h2:hover {
-  color: #ff6600;
-}
+/* Links */
+a { color:#0066cc; text-decoration:none; transition:0.3s; }
+a:hover { color:#ff6600; text-decoration:underline; }
 
-section p,
-section li {
-  margin-bottom: 0.6rem;
-  font-size: 14px;
-  line-height: 1.4;
-}
+/* Animations */
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
 
-/* ===================== Footer ===================== */
-footer {
-  text-align: center;
-  padding: 0.8rem;
-  background-color: #fff4e6;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  font-size: 14px;
-  color: #555;
-}
+/* ================= Responsive ================= */
+@media (max-width:768px) {
+  body { padding:70px 10px 10px; font-size:14px; }
 
-/* ===================== Links ===================== */
-a {
-  color: #0066cc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+  .hero { flex-direction:column; padding:1.5rem; gap:1rem; text-align:center; }
+  .hero-left { order:2; } .hero-right { order:1; justify-content:center; margin-bottom:1rem; }
+  .hero-left h1 { font-size:16px; } .hero-left h3 { font-size:14px; }
+  .profile-wrapper { padding:0.8rem; } .profile-pic { width:130px; height:150px; }
+  .profile-info h2 { font-size:16px; } .profile-info p { font-size:14px; }
 
-a:hover {
-  color: #ff6600;
-  text-decoration: underline;
-}
+  section { padding:1rem; }
+  section h2 { font-size:16px; }
+  section p, section li { font-size:14px; line-height:1.4; }
 
-/* ===================== Hero Float Animation ===================== */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-/* ===================== Responsive - Mobile / Android ===================== */
-@media (max-width: 768px) {
-  body {
-    padding: 65px 10px 10px;
-    font-size: 14px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 1.5rem;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .hero-left {
-    order: 2;
-  }
-
-  .hero-right {
-    order: 1;
-    justify-content: center;
-    margin-bottom: 0.8rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.6rem 1rem;
-  }
-
-  .navbar h1 {
-    font-size: 16px;
-  }
-
-  .navbar ul {
-    justify-content: center;
-    padding-top: 0.6rem;
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  .hero-left h1 {
-    font-size: 16px;
-  }
-
-  .hero-left h3 {
-    font-size: 14px;
-  }
-
-  section {
-    padding: 0.8rem;
-  }
-
-  .profile-wrapper {
-    padding: 0.8rem;
-  }
-
-  .profile-pic {
-    width: 130px;
-    height: 150px;
-  }
-
-  .profile-info h2 {
-    font-size: 14px;
-  }
-
-  .profile-info p {
-    font-size: 14px;
-  }
-
-  section p,
-  section li {
-    line-height: 1.3;
-    font-size: 14px;
-  }
-
-  section h2 {
-    font-size: 16px;
-  }
+  .navbar { flex-direction:column; align-items:flex-start; padding:0.6rem 1rem; }
+  .navbar h1 { font-size:16px; } .navbar ul { justify-content:center; width:100%; gap:0.5rem; }
 }
