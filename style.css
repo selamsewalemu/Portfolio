@@ -10,7 +10,7 @@
 body {
   background: linear-gradient(to bottom right, #f0f0f0, #d4f1f4);
   color: #222;
-  max-width: 600px; /* original container width */
+  max-width: 1000px; /* original container width */
   margin: auto;
   padding: 70px 15px 15px;
   border: 1px solid #ccc;
@@ -28,8 +28,8 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,6 +231,7 @@ a:hover { color: #ff6600; text-decoration: underline; }
   section p, section li{ line-height: 1.3; font-size: 0.9rem; } 
   section h2{ font-size: 1.1rem; }
 }
+
 
 
 
