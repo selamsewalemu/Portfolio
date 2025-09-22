@@ -8,22 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const targetId = link.getAttribute("href").replace("#", "");
 
-      // Remove active from all sections, add to target
       sections.forEach(section => {
         if (section.id === targetId) {
-          section.classList.add("active");
+          section.classList.add("active"); // make visible
+          section.classList.add("slide");  // ensure slide animation
         } else {
           section.classList.remove("active");
+          section.classList.remove("slide");
         }
       });
 
-      // Smooth scroll to the section container
+      // Smooth scroll
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
-      // Update active link
+      // Highlight active link
       navLinks.forEach(nav => nav.classList.remove("active"));
       link.classList.add("active");
     });
