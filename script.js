@@ -1,19 +1,26 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  const fadeSections = document.querySelectorAll(".fade-section");
+  const navLinks = document.querySelectorAll(".navbar a");
+  const allSections = document.querySelectorAll("main section"); // only main sections
 
-  // Intersection animation for fade-ins
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const targetId = link.getAttribute("href").replace("#", "");
+
+      allSections.forEach((section) => {
+        if (section.id === targetId) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
         }
       });
-    },
-    { threshold: 0.1 }
-  );
 
-  fadeSections.forEach((section) => observer.observe(section));
+      // Smooth scroll
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
 });
