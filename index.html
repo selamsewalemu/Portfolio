@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selamsew Alemu Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Smooth scrolling for all anchor links */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 <body>
 
@@ -18,19 +12,19 @@
   <nav class="navbar">
     <h1>Selamsew Portfolio</h1>
     <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#cv" class="nav-link">CV</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" id="home">
+  <header class="hero">
     <div class="hero-left">
       <div class="profile-wrapper">
-        <img src=selamsew photo.jpg alt="Selamsew Alemu" class="profile-pic" />
+        <img src="selamsew photo.jpg" alt="Selamsew Alemu" class="profile-pic" />
         <div class="profile-info">
           <h2>SELAMSEW ALEMU TAMIRAT</h2>
           <p>Electrical and Computer Engineer</p>
@@ -48,7 +42,6 @@
 
   <!-- Content Container -->
   <div class="slide-container">
-
     <!-- About Me -->
     <section id="about">
       <h2>About Me</h2>
@@ -89,8 +82,7 @@
     <!-- CV -->
     <section id="cv" class="center-text">
       <h2>Curriculum Vitae</h2>
-      <!-- Make sure file is renamed without spaces -->
-      <a class="btn" href="CV.pdf" target="_blank">📄 View My Full CV (PDF)</a>
+      <a class="btn" href="CV 1Only.pdf" target="_blank">📄 View My Full CV (PDF)</a>
     </section>
 
     <!-- Contact -->
@@ -109,5 +101,3 @@
 
 </body>
 </html>
-
-
