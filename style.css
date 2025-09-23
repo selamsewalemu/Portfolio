@@ -16,7 +16,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -129,7 +129,7 @@ body, p, li {
   padding: 1rem;
   background: #d7f9ff;
   border: 3px solid #0077ff;
-  border-radius: 18px;
+  border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease;
@@ -149,7 +149,7 @@ body, p, li {
 }
 
 .profile-info h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #e64a19;
   margin-bottom: 0.3rem;
   text-align: center;
@@ -317,4 +317,5 @@ a:hover {
     font-size: 14px;
   }
 }
+
 
