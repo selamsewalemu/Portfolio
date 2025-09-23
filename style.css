@@ -4,21 +4,21 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  text-align: justify; /* Ensures CTRL+J effect */
+  text-align: justify; /* International standard CTRL+J alignment */
 }
 
 body {
   background: linear-gradient(to bottom right, #f0f0f0, #d4f1f4);
   color: #222;
-  max-width: 1000px;
+  max-width: 1200px; /* Slightly wider for large screens */
   margin: auto;
-  padding: 90px 18px 20px;
+  padding: 90px 20px 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
-  font-size: 14px; /* Standard body text */
-  line-height: 1.6;
+  font-size: 15px; /* Comfortable reading size */
+  line-height: 1.7;
 }
 
 /* ===================== Navbar ===================== */
@@ -28,20 +28,19 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #00e0ff, #00c2cb);
-  padding: 1rem 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   z-index: 999;
 }
 
 .navbar h1 {
-  font-size: 16px; /* Title font size */
+  font-size: 18px; /* Title size international standard */
   color: #062e3f;
   font-weight: bold;
 }
@@ -49,7 +48,7 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
@@ -60,7 +59,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .navbar a:hover,
@@ -74,10 +73,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem;
+  padding: 3rem;
   background: linear-gradient(to right, #ff6a00, #ffd8a9);
   border: 3px dashed #b84f00;
-  border-radius: 18px;
+  border-radius: 20px;
   margin-bottom: 2rem;
   gap: 2rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
@@ -91,15 +90,15 @@ body {
 
 .hero-left h1 {
   color: #220700;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 0.8rem;
   animation: fadeInDown 1s ease;
 }
 
 .hero-left h3 {
   color: #2a0c00;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .hero-right {
@@ -128,8 +127,8 @@ body {
 }
 
 .profile-pic {
-  width: 170px;
-  height: 190px;
+  width: 180px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff8c00;
@@ -153,7 +152,7 @@ body {
 /* ===================== Section Styling ===================== */
 section {
   background-color: white;
-  padding: 1.6rem;
+  padding: 2rem;
   border-radius: 14px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
@@ -178,7 +177,7 @@ section h1 {
 section p,
 section li {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #333;
 }
 
@@ -193,7 +192,7 @@ footer {
   background-color: #fff4e6;
   border-radius: 10px;
   margin-top: 2rem;
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
 }
 
@@ -227,6 +226,11 @@ a:hover {
 
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Readable on Android */
+    padding: 80px 14px 20px;
+  }
+
   .hero {
     flex-direction: column-reverse;
     padding: 1.6rem;
@@ -236,11 +240,11 @@ a:hover {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.8rem;
+    padding: 1rem;
   }
 
   .navbar h1 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .navbar ul {
@@ -251,15 +255,15 @@ a:hover {
   }
 
   .hero-left h1 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .hero-left h3 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   section {
-    padding: 1.2rem;
+    padding: 1.4rem;
   }
 
   .profile-pic {
@@ -268,10 +272,11 @@ a:hover {
   }
 
   .profile-info h2 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .profile-info p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
+
