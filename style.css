@@ -20,14 +20,16 @@ body {
   line-height: 1.7;
 }
 
-/* Fix Android spacing issues */
+/* ===================== Fix Android spacing issues ===================== */
 body, p, li {
-  text-align: justify;       /* CTRL+J alignment */
-  word-spacing: normal;      /* Prevents wide gaps */
-  letter-spacing: normal;    /* Natural spacing */
-  hyphens: auto;             /* Allow word breaks */
-  -webkit-hyphens: auto;     /* Android/Chrome */
-  -ms-hyphens: auto;         /* IE/Edge fallback */
+  text-align: justify;          /* CTRL+J alignment */
+  word-spacing: 0.02em;         /* Prevents wide gaps */
+  letter-spacing: 0;            /* Keep natural spacing */
+  line-height: 1.6;             /* Balanced for readability */
+  hyphens: auto;                /* Allow word breaks */
+  -webkit-hyphens: auto;        /* Android/Chrome */
+  -ms-hyphens: auto;            /* IE/Edge fallback */
+  text-justify: inter-word;     /* Even justification */
 }
 
 /* ===================== Navbar ===================== */
