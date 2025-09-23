@@ -4,21 +4,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  text-align: justify; /* International standard CTRL+J alignment */
 }
 
 body {
   background: linear-gradient(to bottom right, #f0f0f0, #d4f1f4);
   color: #222;
-  max-width: 1200px; /* Slightly wider for large screens */
+  max-width: 1200px; /* Wider for large screens */
   margin: auto;
   padding: 90px 20px 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
-  font-size: 15px; /* Comfortable reading size */
+  font-size: 15px; /* Comfortable reading */
   line-height: 1.7;
+}
+
+/* Fix Android spacing issues */
+body, p, li {
+  text-align: justify;       /* CTRL+J alignment */
+  word-spacing: normal;      /* Prevents wide gaps */
+  letter-spacing: normal;    /* Natural spacing */
+  hyphens: auto;             /* Allow word breaks */
+  -webkit-hyphens: auto;     /* Android/Chrome */
+  -ms-hyphens: auto;         /* IE/Edge fallback */
 }
 
 /* ===================== Navbar ===================== */
@@ -40,7 +49,7 @@ body {
 }
 
 .navbar h1 {
-  font-size: 18px; /* Title size international standard */
+  font-size: 18px;
   color: #062e3f;
   font-weight: bold;
 }
@@ -227,7 +236,7 @@ a:hover {
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
   body {
-    font-size: 14px; /* Readable on Android */
+    font-size: 14px;
     padding: 80px 14px 20px;
   }
 
@@ -279,4 +288,3 @@ a:hover {
     font-size: 14px;
   }
 }
-
