@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selamsew Alemu Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Android word-spacing fix -->
+  <style>
+    body, p, li {
+      text-align: justify;
+      word-spacing: normal;
+      letter-spacing: normal;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      overflow-wrap: anywhere;
+    }
+
+    /* On small screens, stop weird justification gaps */
+    @media (max-width: 700px) {
+      body, p, li {
+        text-align: left;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -103,5 +125,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
