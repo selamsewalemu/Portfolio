@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
   text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 body {
@@ -82,7 +85,6 @@ body {
   gap: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  word-spacing: normal;
 }
 
 /* Hero Left */
@@ -102,8 +104,6 @@ body {
   color: #2a0c00;
   font-size: 1.15rem;
   line-height: 1.6;
-  word-spacing: normal;
-  letter-spacing: normal;
 }
 
 /* Hero Right / Profile Placement */
@@ -112,10 +112,10 @@ body {
   order: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left alignment */
+  align-items: flex-start; 
   justify-content: center;
   gap: 0;
-  margin-right: auto; /* nearest to left edge */
+  margin-right: auto; 
 }
 
 /* ===================== Profile Section ===================== */
@@ -135,7 +135,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0; /* flush to left edge */
+  margin-left: 0;
 }
 
 .profile-pic {
@@ -195,7 +195,9 @@ section li {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  word-spacing: normal;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+  text-justify: inter-word;
 }
 
 ul li {
@@ -310,12 +312,15 @@ a:hover {
   }
 
   section p,
-  section li {
+  section li,
+  .profile-info p,
+  #contact p,
+  #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
     text-align: justify;
     text-justify: inter-word;
-    word-spacing: 3px;
+    word-spacing: 2.5px;
     letter-spacing: 0.5px;
   }
 
@@ -334,24 +339,5 @@ a:hover {
 
   .profile-info h2 {
     font-size: 1.1rem;
-  }
-
-  .profile-info p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    text-justify: inter-word;
-    word-spacing: 3px;
-    letter-spacing: 0.5px;
-  }
-
-  #contact p,
-  #contact li {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    text-justify: inter-word;
-    word-spacing: 3px;
-    letter-spacing: 0.5px;
   }
 }
