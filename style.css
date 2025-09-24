@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  text-align: justify;
 }
 
 body {
@@ -82,10 +81,8 @@ body {
   gap: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  word-spacing: normal;
 }
 
-/* Hero Left */
 .hero-left {
   flex: 1;
   order: 2;
@@ -102,20 +99,17 @@ body {
   color: #2a0c00;
   font-size: 1.15rem;
   line-height: 1.6;
-  word-spacing: normal;
-  letter-spacing: normal;
 }
 
-/* Hero Right / Profile Placement */
 .hero-right {
   flex: 1;
   order: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left alignment */
+  align-items: flex-start;
   justify-content: center;
   gap: 0;
-  margin-right: auto; /* nearest to left edge */
+  margin-right: auto;
 }
 
 /* ===================== Profile Section ===================== */
@@ -135,7 +129,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0; /* flush to left edge */
+  margin-left: 0;
 }
 
 .profile-pic {
@@ -160,7 +154,7 @@ body {
   color: #111;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 1px;   /* formal spacing for all devices */
+  word-spacing: 1px;
   letter-spacing: 0.2px;
   word-break: break-word;
   overflow-wrap: anywhere;
@@ -177,9 +171,6 @@ section {
   border-left: 6px solid #b85c38;
   display: none;
   transition: opacity 0.5s ease;
-  text-align: justify;
-  word-break: break-word;
-  overflow-wrap: anywhere;
 }
 
 section.active {
@@ -194,12 +185,24 @@ section h1 {
   font-size: 1.6rem;
 }
 
-section p,
+section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;      /* paragraphs stay justified */
+  text-justify: inter-word;
+  word-spacing: 1px;
+  letter-spacing: 0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 section li {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  word-spacing: 1px;   /* formal spacing */
+  text-align: left;        /* ✅ lists left aligned */
+  word-spacing: normal;
   letter-spacing: 0.2px;
   word-break: break-word;
   overflow-wrap: anywhere;
@@ -210,13 +213,22 @@ ul li {
 }
 
 /* ===================== Contact Section Enhancement ===================== */
-#contact p,
-#contact li {
+#contact p {
   font-size: 1.15rem;
   line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 1px;   /* formal spacing */
+  word-spacing: 1px;
+  letter-spacing: 0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+#contact li {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  text-align: left;       /* ✅ fix for Android */
+  word-spacing: normal;
   letter-spacing: 0.2px;
   word-break: break-word;
   overflow-wrap: anywhere;
@@ -267,7 +279,7 @@ a:hover {
     flex-direction: column-reverse;
     padding: 1.5rem;
     text-align: center;
-    gap: 2rem; /* more space between hero and profile */
+    gap: 2rem;
   }
 
   .navbar {
@@ -293,43 +305,38 @@ a:hover {
 
   section { padding: 1.2rem; }
 
-  section p,
+  section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: justify;
+    word-spacing: 1px;
+    letter-spacing: 0.2px;
+  }
+
   section li,
-  #contact p,
   #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: 1px;   /* formal spacing for Android */
+    text-align: left;    /* ✅ lists normal on Android */
+    word-spacing: normal;
     letter-spacing: 0.2px;
-    text-align: justify;
-    text-justify: inter-word;
-    word-break: break-word;
-    overflow-wrap: anywhere;
   }
 
-  /* Profile adjustments */
   .profile-wrapper {
     min-width: 180px;
     max-width: 350px;
     min-height: 250px;
     max-height: 400px;
     width: 90%;
-    margin-left: 0; /* flush to left side */
+    margin-left: 0;
     margin-right: auto;
   }
 
   .profile-info p {
     font-size: 1rem;
     line-height: 1.5;
-    word-spacing: 1px;   /* formal spacing */
-    letter-spacing: 0.2px;
-    text-align: justify;
-    text-justify: inter-word;
-    word-break: break-word;
-    overflow-wrap: anywhere;
   }
 
   .profile-pic { width: 140px; height: 160px; }
-
   .profile-info h2 { font-size: 1.1rem; }
 }
