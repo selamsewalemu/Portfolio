@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
   text-align: justify;
-  word-spacing: normal; /* Fix word spacing */
 }
 
 body {
@@ -16,7 +15,7 @@ body {
   padding: 100px 20px 20px;
   border: 1px solid #ccc;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
+  font-size: 16px; /* Enhanced body text */
   line-height: 1.8;
   scroll-behavior: smooth;
   transition: all 0.4s ease-in-out;
@@ -130,9 +129,8 @@ body {
 /* ===================== Profile ===================== */
 .profile-wrapper {
   display: flex;
-  flex-direction: row; /* Desktop: image left, paragraph right */
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
   padding: 1.2rem 2rem;
   background: linear-gradient(to bottom, #d7f9ff, #b3e5ff);
   border: 4px solid #0077ff;
@@ -153,8 +151,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #ff8c00;
-  margin-right: 1.5rem; /* Space between image and paragraph */
-  margin-left: 0; /* Closer to left corner */
+  margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
 
@@ -162,13 +159,9 @@ body {
   transform: scale(1.07) rotate(2deg);
 }
 
-.profile-info {
-  flex: 1;
-}
-
 .profile-info h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: bold; /* Bold titles */
   color: #e64a19;
   margin-bottom: 0.4rem;
   cursor: pointer;
@@ -183,8 +176,6 @@ body {
 .profile-info p {
   font-size: 1.2rem;
   color: #111;
-  text-align: justify;
-  word-spacing: normal; /* Fix word spacing */
 }
 
 /* ===================== Sections ===================== */
@@ -207,7 +198,7 @@ section.active {
 section h2 {
   margin-bottom: 1rem;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: bold; /* All section titles bold */
   color: #b85c38;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -269,74 +260,17 @@ a:hover {
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================== Responsive (Android / Mobile only) ===================== */
+/* ===================== Responsive ===================== */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .navbar h1 {
-    font-size: 1.7rem;
-  }
-
-  .navbar ul {
-    justify-content: center;
-    width: 100%;
-    gap: 0.8rem;
-  }
-
-  .hero-left h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero-left h3 {
-    font-size: 1.1rem;
-  }
-
-  /* Mobile Profile adjustments */
-  .profile-wrapper {
-    flex-direction: column; /* Image on top */
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .profile-pic {
-    width: 140px;
-    height: 160px;
-    margin-left: 0;
-    margin-bottom: 0.8rem;
-  }
-
-  .profile-info h2 {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .profile-info p {
-    font-size: 1rem;
-    text-align: justify;
-    word-spacing: normal;
-  }
-
-  section {
-    padding: 1.2rem;
-  }
-
-  section h2 {
-    font-size: 1.4rem;
-  }
-
-  section p,
-  section li {
-    font-size: 1rem;
-  }
+  .hero { flex-direction: column-reverse; padding: 2rem; gap: 1.5rem; }
+  .navbar { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .navbar h1 { font-size: 1.7rem; }
+  .navbar ul { justify-content: center; width: 100%; gap: 0.8rem; }
+  .hero-left h1 { font-size: 1.6rem; }
+  .hero-left h3 { font-size: 1.1rem; }
+  .profile-pic { width: 140px; height: 160px; }
+  .profile-info h2 { font-size: 1.3rem; }
+  section { padding: 1.2rem; }
+  section h2 { font-size: 1.4rem; }
+  section p, section li { font-size: 1rem; }
 }
