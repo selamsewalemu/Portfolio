@@ -1,24 +1,23 @@
-/* ===================== Reset & Base ===================== */
+/* ===================== Reset & Base Styling ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  text-align: justify;
 }
 
 body {
-  background: linear-gradient(135deg, #f0f0f0, #d4f1f4);
+  background: linear-gradient(to bottom right, #f0f0f0, #d4f1f4);
   color: #222;
   max-width: 1000px;
   margin: auto;
   padding: 100px 20px 20px;
   border: 1px solid #ccc;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-  font-size: 16px; /* Enhanced body text */
-  line-height: 1.8;
-  scroll-behavior: smooth;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease-in-out;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  font-size: 13px;
 }
 
 /* ===================== Navbar ===================== */
@@ -30,32 +29,26 @@ body {
   width: 100%;
   max-width: 1000px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #00e0ff, #00c2cb);
   padding: 1.2rem 2rem;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   z-index: 999;
 }
 
-.navbar h1 {
-  font-size: 2rem;
-  font-weight: bold;
+.navbar h2 {
+  font-size: 1.8rem;
   color: #062e3f;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.navbar h1:hover {
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-weight: bold;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
@@ -63,18 +56,18 @@ body {
   text-decoration: none;
   color: #062e3f;
   font-weight: bold;
-  font-size: 16px;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease, background 0.3s ease;
   cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  letter-spacing: 1px;
-  font-weight: bolder;
+  color: #ffffff;
+  border-bottom: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* ===================== Hero Section ===================== */
@@ -82,143 +75,85 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
   background: linear-gradient(to right, #ff6a00, #ffd8a9);
   border: 4px dashed #b84f00;
   border-radius: 20px;
-  margin-bottom: 2rem;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-}
-
-.hero-left {
-  flex: 1;
-  order: 1;
-}
-
-.hero-left h1 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #220700;
-  margin-bottom: 1rem;
-  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  animation: fadeInDown 1s ease;
 }
 
-.hero-left h1:hover {
-  color: #ff6600;
-  transform: scale(1.05);
-}
+.hero-left { flex: 1; }
+.hero-right { flex: 1; display: flex; justify-content: flex-end; }
 
-.hero-left h3 {
-  color: #2a0c00;
-  font-size: 1.2rem;
-  line-height: 1.7;
-}
-
-.hero-right {
-  flex: 1;
-  order: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ===================== Profile ===================== */
-.profile-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.2rem 2rem;
-  background: linear-gradient(to bottom, #d7f9ff, #b3e5ff);
-  border: 4px solid #0077ff;
+/* Profile Wrapper */
+.profile-wrapper { 
+  background: #d7f9ff;
+  border: 3px solid #0077ff;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  animation: float 4s ease-in-out infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  min-width: 220px; max-width: 400px;
 }
 
-.profile-wrapper:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-.profile-pic {
-  width: 180px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ff8c00;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-  transform: scale(1.07) rotate(2deg);
+.profile-pic { 
+  width: 180px; 
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 4px solid #ff8c00; 
+  margin-bottom: 1rem; 
 }
 
 .profile-info h2 {
-  font-size: 1.5rem;
-  font-weight: bold; /* Bold titles */
+  font-size: 1.4rem;
   color: #e64a19;
-  margin-bottom: 0.4rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  margin-bottom: 0.3rem;
+  text-align: center;
 }
 
-.profile-info h2:hover {
-  color: #ff6600;
-  transform: scale(1.05);
-}
-
-.profile-info p {
-  font-size: 1.2rem;
-  color: #111;
+/* ===================== Paragraph Styling ===================== */
+section p, .profile-info p, #contact p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-justify: auto;
+  hyphens: auto;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  margin-bottom: 1rem;
 }
 
 /* ===================== Sections ===================== */
 section {
-  background-color: #fff;
+  background-color: white;
   padding: 2rem;
   border-radius: 14px;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   border-left: 6px solid #b85c38;
   display: none;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
-section.active {
-  display: block;
-  animation: slideIn 0.7s ease-in-out;
-}
+section.active { display: block; animation: slideIn 0.7s ease-in-out; }
 
-section h2 {
+section h2, section h1 {
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: bold; /* All section titles bold */
   color: #b85c38;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1.6rem;
 }
 
-section h2:hover {
-  color: #ff6600;
-  transform: scale(1.05);
-}
-
-section p,
-section li {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-ul li {
-  margin-bottom: 0.6rem;
-}
+section li { font-size: 1.1rem; line-height: 1.7; color: #333; margin-bottom: 0.6rem; }
 
 /* ===================== Footer ===================== */
 footer {
@@ -226,51 +161,35 @@ footer {
   padding: 1rem;
   background-color: #fff4e6;
   border-radius: 10px;
-  font-size: 1rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
   color: #555;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* ===================== Links ===================== */
-a {
-  color: #0066cc;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #ff6600;
-  text-decoration: underline;
-  font-weight: bold;
-}
+a { color: #0066cc; text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: #ff6600; text-decoration: underline; }
 
 /* ===================== Animations ===================== */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 @keyframes slideIn {
   0% { opacity: 0; transform: translateX(-100%); }
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================== Responsive ===================== */
+/* ===================== Responsive Hero (Mobile: Profile Top) ===================== */
 @media (max-width: 768px) {
-  .hero { flex-direction: column-reverse; padding: 2rem; gap: 1.5rem; }
-  .navbar { flex-direction: column; align-items: flex-start; padding: 1rem; }
-  .navbar h1 { font-size: 1.7rem; }
-  .navbar ul { justify-content: center; width: 100%; gap: 0.8rem; }
+  .hero { flex-direction: column; align-items: center; }
+  .hero-right { order: -1; justify-content: center; margin-bottom: 1rem; }
+  .hero-left { text-align: center; }
+  .profile-wrapper { width: 70%; max-width: 300px; }
   .hero-left h1 { font-size: 1.6rem; }
-  .hero-left h3 { font-size: 1.1rem; }
+  .hero-left h3 { font-size: 1rem; line-height: 1.4; }
   .profile-pic { width: 140px; height: 160px; }
-  .profile-info h2 { font-size: 1.3rem; }
-  section { padding: 1.2rem; }
-  section h2 { font-size: 1.4rem; }
-  section p, section li { font-size: 1rem; }
+}
+
+/* ===================== Small Mobile Screens ===================== */
+@media (max-width: 480px) {
+  .profile-pic { width: 120px; height: 140px; }
+  .profile-info h2 { font-size: 1.1rem; }
+  section p, li { font-size: 0.95rem; line-height: 1.4; }
 }
