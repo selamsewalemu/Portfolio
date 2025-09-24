@@ -112,10 +112,10 @@ body {
   order: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* left alignment */
   justify-content: center;
   gap: 0;
-  margin-right: auto;
+  margin-right: auto; /* nearest to left edge */
 }
 
 /* ===================== Profile Section ===================== */
@@ -135,7 +135,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0; /* flush to left edge for PC */
+  margin-left: 0; /* flush to left edge */
 }
 
 .profile-pic {
@@ -160,7 +160,7 @@ body {
   color: #111;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: normal;
+  word-spacing: normal;  /* normal spacing for PC */
   letter-spacing: normal;
   margin: 0;
 }
@@ -195,10 +195,12 @@ section li {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  word-spacing: normal;
+  word-spacing: normal; /* normal spacing for PC */
 }
 
-ul li { margin-bottom: 0.6rem; }
+ul li {
+  margin-bottom: 0.6rem;
+}
 
 /* ===================== Contact Section Enhancement ===================== */
 #contact p,
@@ -207,7 +209,7 @@ ul li { margin-bottom: 0.6rem; }
   line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: normal;
+  word-spacing: normal; /* normal spacing for PC */
   letter-spacing: normal;
 }
 
@@ -236,28 +238,44 @@ a:hover {
 
 /* ===================== Animations ===================== */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  0% { opacity: 0; transform: translateX(-100%); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* ===================== Responsive / Android ===================== */
+/* ===================== Responsive for Android & Mobile ===================== */
 @media (max-width: 768px) {
 
   .hero {
     flex-direction: column-reverse;
     padding: 1.5rem;
     text-align: center;
-    gap: 2rem; /* more spacing between hero and profile */
+    gap: 2rem; /* more space between hero profile and text */
   }
 
   .navbar {
@@ -290,23 +308,25 @@ a:hover {
   .profile-info p {
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: normal !important;  /* formal spacing for Android */
-    letter-spacing: normal !important; /* formal letter spacing */
+    word-spacing: normal !important; /* fix for Android spacing */
+    letter-spacing: normal !important;
     text-align: justify;
     text-justify: inter-word;
   }
 
-  /* Profile rectangle adjustments */
+  /* Profile rectangle adjustments for mobile */
   .profile-wrapper {
     min-width: 180px;
     max-width: 350px;
     min-height: 250px;
     max-height: 400px;
     width: 90%;
-    margin-left: 0px; /* flush to left edge */
+    margin-left: 0; /* flush to left */
     margin-right: auto;
   }
 
   .profile-pic { width: 140px; height: 160px; }
+
   .profile-info h2 { font-size: 1.1rem; }
+
 }
