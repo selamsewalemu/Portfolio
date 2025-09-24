@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
   text-align: justify;
-  word-spacing: normal; /* Fix extra spaces between words */
 }
 
 body {
@@ -130,7 +129,7 @@ body {
 /* ===================== Profile ===================== */
 .profile-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Desktop layout: image beside text */
   align-items: center;
   padding: 1.2rem 2rem;
   background: linear-gradient(to bottom, #d7f9ff, #b3e5ff);
@@ -152,7 +151,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #ff8c00;
-  margin-bottom: 1rem;
+  margin-right: 1.5rem; /* Desktop layout spacing */
   transition: transform 0.3s ease;
 }
 
@@ -178,7 +177,6 @@ body {
   font-size: 1.2rem;
   color: #111;
   text-align: justify;
-  word-spacing: normal;
 }
 
 /* ===================== Sections ===================== */
@@ -263,58 +261,72 @@ a:hover {
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================== Responsive ===================== */
+/* ===================== Responsive (Android / Mobile only) ===================== */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
   }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
   }
+
   .navbar h1 {
     font-size: 1.7rem;
   }
+
   .navbar ul {
     justify-content: center;
     width: 100%;
     gap: 0.8rem;
   }
+
   .hero-left h1 {
     font-size: 1.6rem;
   }
+
   .hero-left h3 {
     font-size: 1.1rem;
   }
+
+  /* ===== Profile adjustments only for Android/small screens ===== */
   .profile-wrapper {
-    flex-direction: column;
+    flex-direction: column;       /* Move image above text */
     align-items: center;
     padding: 1rem;
   }
+
   .profile-pic {
     width: 140px;
     height: 160px;
-    margin-bottom: 0.8rem;
+    margin-right: 0;             /* Remove desktop right margin */
+    margin-bottom: 0.8rem;       /* Space below image */
   }
+
   .profile-info h2 {
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 0.5rem;
   }
+
   .profile-info p {
     font-size: 1rem;
     text-align: justify;
-    word-spacing: normal;
+    word-spacing: normal;        /* Fix Android spacing */
   }
+
   section {
     padding: 1.2rem;
   }
+
   section h2 {
     font-size: 1.4rem;
   }
+
   section p,
   section li {
     font-size: 1rem;
