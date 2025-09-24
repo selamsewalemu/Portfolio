@@ -121,7 +121,7 @@ body {
   align-items: center;
   padding: 1rem;
   background: #d7f9ff;
-  border: 3px solid #0077ff;
+  border: 1px solid #0077ff;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
@@ -344,6 +344,7 @@ a:hover {
     letter-spacing: normal;
   }
 }
+
 
 
 
