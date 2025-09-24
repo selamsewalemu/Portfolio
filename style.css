@@ -112,10 +112,10 @@ body {
   order: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* push profile to the extreme right */
+  align-items: flex-start; /* left alignment */
   justify-content: center;
   gap: 0;
-  margin-left: auto; /* ensures nearest to right border */
+  margin-right: auto; /* nearest to left edge */
 }
 
 /* ===================== Profile Section ===================== */
@@ -130,13 +130,12 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease;
-
   min-width: 220px;
   max-width: 400px;
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-right: 0; /* flush to right edge */
+  margin-left: 0; /* flush to left edge */
 }
 
 .profile-pic {
@@ -160,8 +159,9 @@ body {
   line-height: 1.6;
   color: #111;
   text-align: justify;
-  word-spacing: normal;
-  letter-spacing: normal;
+  text-justify: inter-word;
+  word-spacing: 3px;
+  letter-spacing: 0.5px;
   margin: 0;
 }
 
@@ -173,7 +173,7 @@ section {
   margin-bottom: 2rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   border-left: 6px solid #b85c38;
-  display: none; /* hidden by default */
+  display: none;
   transition: opacity 0.5s ease;
   text-align: justify;
 }
@@ -207,7 +207,10 @@ ul li {
 #contact li {
   font-size: 1.15rem;
   line-height: 1.75;
-  word-spacing: normal;
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 3px;
+  letter-spacing: 0.5px;
 }
 
 /* ===================== Footer ===================== */
@@ -310,6 +313,10 @@ a:hover {
   section li {
     font-size: 1.05rem;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
   }
 
   .profile-pic {
@@ -332,11 +339,19 @@ a:hover {
   .profile-info p {
     font-size: 1rem;
     line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
   }
 
   #contact p,
   #contact li {
     font-size: 1.1rem;
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
   }
 }
