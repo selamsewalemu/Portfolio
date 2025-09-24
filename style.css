@@ -115,7 +115,7 @@ body {
   align-items: flex-start; /* left alignment */
   justify-content: center;
   gap: 0;
-  margin-right: auto; /* nearest to left edge */
+  margin-right: auto;
 }
 
 /* ===================== Profile Section ===================== */
@@ -135,7 +135,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0;
+  margin-left: 0; /* flush to left on desktop */
 }
 
 .profile-pic {
@@ -274,7 +274,7 @@ a:hover {
     flex-direction: column-reverse;
     padding: 1.5rem;
     text-align: center;
-    gap: 1rem;
+    gap: 2rem; /* increased space between hero-left and hero-right */
   }
 
   .navbar {
@@ -299,7 +299,7 @@ a:hover {
   .hero-right h3 {
     font-size: 1rem;
     line-height: 1.5;
-    word-spacing: 2px; /* formal spacing for hero */
+    word-spacing: 2px;
     letter-spacing: 0.5px;
   }
 
@@ -324,7 +324,7 @@ a:hover {
     min-height: 250px;
     max-height: 400px;
     width: 90%;
-    margin-left: 10px; /* closer to left edge */
+    margin-left: 5px; /* closer to left edge */
     margin-right: auto;
   }
 
