@@ -332,7 +332,7 @@ a:hover {
 }
 
 /* ===================== Small Mobile Screens ===================== */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .profile-info p,
   section p,
   #contact p {
@@ -343,3 +343,4 @@ a:hover {
     letter-spacing: normal;
   }
 }
+
