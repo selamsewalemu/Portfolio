@@ -160,8 +160,10 @@ body {
   color: #111;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: normal;  /* normal spacing for PC */
-  letter-spacing: normal;
+  word-spacing: 1px;   /* formal spacing for all devices */
+  letter-spacing: 0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   margin: 0;
 }
 
@@ -176,6 +178,8 @@ section {
   display: none;
   transition: opacity 0.5s ease;
   text-align: justify;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 section.active {
@@ -195,7 +199,10 @@ section li {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  word-spacing: normal; /* normal spacing for PC */
+  word-spacing: 1px;   /* formal spacing */
+  letter-spacing: 0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 ul li {
@@ -209,8 +216,10 @@ ul li {
   line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: normal; /* normal spacing for PC */
-  letter-spacing: normal;
+  word-spacing: 1px;   /* formal spacing */
+  letter-spacing: 0.2px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* ===================== Footer ===================== */
@@ -238,44 +247,27 @@ a:hover {
 
 /* ===================== Animations ===================== */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================== Responsive for Android & Mobile ===================== */
+/* ===================== Responsive ===================== */
 @media (max-width: 768px) {
-
   .hero {
     flex-direction: column-reverse;
     padding: 1.5rem;
     text-align: center;
-    gap: 2rem; /* more space between hero profile and text */
+    gap: 2rem; /* more space between hero and profile */
   }
 
   .navbar {
@@ -304,29 +296,40 @@ a:hover {
   section p,
   section li,
   #contact p,
-  #contact li,
-  .profile-info p {
+  #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: normal !important; /* fix for Android spacing */
-    letter-spacing: normal !important;
+    word-spacing: 1px;   /* formal spacing for Android */
+    letter-spacing: 0.2px;
     text-align: justify;
     text-justify: inter-word;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
-  /* Profile rectangle adjustments for mobile */
+  /* Profile adjustments */
   .profile-wrapper {
     min-width: 180px;
     max-width: 350px;
     min-height: 250px;
     max-height: 400px;
     width: 90%;
-    margin-left: 0; /* flush to left */
+    margin-left: 0; /* flush to left side */
     margin-right: auto;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-spacing: 1px;   /* formal spacing */
+    letter-spacing: 0.2px;
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 
   .profile-pic { width: 140px; height: 160px; }
 
   .profile-info h2 { font-size: 1.1rem; }
-
 }
