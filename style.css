@@ -149,21 +149,25 @@ body {
   text-align: center;
 }
 
+/* ===================== Paragraph Fix for Android & PC ===================== */
 .profile-info p,
-section p {
+section p,
+#contact p {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #111;
-  text-align: justify;
-  text-justify: inter-word;
-  word-spacing: 0;          /* 🔥 Force zero extra word spacing */
-  letter-spacing: 0;        /* 🔥 No letter spacing */
-  -webkit-text-size-adjust: 100%;  /* 🔥 Prevent Android auto text resizing */
+  text-align: left;           /* Fixes Android wide spacing */
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-justify: auto;
+  hyphens: auto;
+  -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   word-break: break-word;
   overflow-wrap: anywhere;
   margin: 0;
 }
+
 /* ===================== Sections ===================== */
 section {
   background-color: white;
@@ -188,17 +192,6 @@ section h1 {
   font-size: 1.6rem;
 }
 
-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-  text-align: justify;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
 section li {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -215,16 +208,6 @@ ul li {
 }
 
 /* ===================== Contact Section Enhancement ===================== */
-#contact p {
-  font-size: 1.15rem;
-  line-height: 1.75;
-  text-align: justify;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
 #contact li {
   font-size: 1.15rem;
   line-height: 1.75;
@@ -277,15 +260,16 @@ a:hover {
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
   .profile-info p,
-  section p {
+  section p,
+  #contact p {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: justify;
-    word-spacing: 0;      /* 🔥 Fix wide spacing on Android */
-    letter-spacing: 0;
+    text-align: left;
+    word-spacing: normal;
+    letter-spacing: normal;
     -webkit-text-size-adjust: 100%;
   }
-}
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -312,7 +296,7 @@ a:hover {
   section p {
     font-size: 1.05rem;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left;
     word-spacing: normal;
     letter-spacing: normal;
   }
@@ -347,3 +331,15 @@ a:hover {
   .profile-info h2 { font-size: 1.1rem; }
 }
 
+/* ===================== Small Mobile Screens ===================== */
+@media (max-width: 480px) {
+  .profile-info p,
+  section p,
+  #contact p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+}
