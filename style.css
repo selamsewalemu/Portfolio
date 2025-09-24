@@ -176,6 +176,9 @@ section {
   display: none;
   transition: opacity 0.5s ease;
   text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 section.active {
@@ -194,14 +197,6 @@ section p,
 section li {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #333;
-  word-spacing: 2px;
-  letter-spacing: 0.5px;
-  text-justify: inter-word;
-}
-
-ul li {
-  margin-bottom: 0.6rem;
 }
 
 /* ===================== Contact Section Enhancement ===================== */
@@ -240,34 +235,18 @@ a:hover {
 
 /* ===================== Animations ===================== */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
 }
 
 /* ===================== Responsive ===================== */
@@ -285,9 +264,7 @@ a:hover {
     padding: 1rem;
   }
 
-  .navbar h1 {
-    font-size: 1.5rem;
-  }
+  .navbar h1 { font-size: 1.5rem; }
 
   .navbar ul {
     justify-content: center;
@@ -297,9 +274,7 @@ a:hover {
   }
 
   .hero-left h1,
-  .hero-right h1 {
-    font-size: 1.6rem;
-  }
+  .hero-right h1 { font-size: 1.6rem; }
 
   .hero-left h3,
   .hero-right h3 {
@@ -307,9 +282,7 @@ a:hover {
     line-height: 1.5;
   }
 
-  section {
-    padding: 1.2rem;
-  }
+  section { padding: 1.2rem; }
 
   section p,
   section li,
@@ -318,16 +291,13 @@ a:hover {
   #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
+    word-spacing: 4px;  /* increased spacing for Android */
+    letter-spacing: 0.6px; /* slightly larger */
     text-align: justify;
     text-justify: inter-word;
-    word-spacing: 2.5px;
-    letter-spacing: 0.5px;
   }
 
-  .profile-pic {
-    width: 140px;
-    height: 160px;
-  }
+  .profile-pic { width: 140px; height: 160px; }
 
   .profile-wrapper {
     min-width: 180px;
@@ -337,7 +307,5 @@ a:hover {
     width: 90%;
   }
 
-  .profile-info h2 {
-    font-size: 1.1rem;
-  }
+  .profile-info h2 { font-size: 1.1rem; }
 }
