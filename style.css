@@ -120,7 +120,7 @@ body {
   align-items: center;
   padding: 1rem;
   background: #d7f9ff;
-  border: 5px solid #0077ff;
+  border: 3px solid #0077ff;
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
@@ -149,31 +149,23 @@ body {
   text-align: center;
 }
 
-/* ===================== About Me Paragraph Fix ===================== */
-p.about-me {
+/* ===================== Paragraph Fix for Android & PC ===================== */
+.profile-info p,
+section p,
+#contact p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  text-align: left;             /* Prevent Android wide spacing */
+  text-align: left;           /* Fixes Android wide spacing */
   word-spacing: normal;
   letter-spacing: normal;
-  -webkit-text-size-adjust: 100%; 
-  text-rendering: optimizeLegibility;
+  text-justify: auto;
   hyphens: auto;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
   word-break: break-word;
   overflow-wrap: anywhere;
-  margin-bottom: 1rem;
-}
-
-/* Responsive fix for small screens */
-@media (max-width: 480px) {
-  p.about-me {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: left;
-    word-spacing: normal;
-    letter-spacing: normal;
-  }
+  margin: 0;
 }
 
 /* ===================== Sections ===================== */
@@ -200,17 +192,6 @@ section h1 {
   font-size: 1.6rem;
 }
 
-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-  text-align: justify;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
 section li {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -227,16 +208,6 @@ ul li {
 }
 
 /* ===================== Contact Section Enhancement ===================== */
-#contact p {
-  font-size: 1.15rem;
-  line-height: 1.75;
-  text-align: justify;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-}
-
 #contact li {
   font-size: 1.15rem;
   line-height: 1.75;
@@ -288,10 +259,12 @@ a:hover {
 
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
-  .profile-info p, section p {
+  .profile-info p,
+  section p,
+  #contact p {
     font-size: 1rem;
     line-height: 1.5;
-    text-align: justify;
+    text-align: left;
     word-spacing: normal;
     letter-spacing: normal;
     -webkit-text-size-adjust: 100%;
@@ -323,7 +296,7 @@ a:hover {
   section p {
     font-size: 1.05rem;
     line-height: 1.6;
-    text-align: justify;
+    text-align: left;
     word-spacing: normal;
     letter-spacing: normal;
   }
@@ -356,4 +329,17 @@ a:hover {
 
   .profile-pic { width: 140px; height: 160px; }
   .profile-info h2 { font-size: 1.1rem; }
+}
+
+/* ===================== Small Mobile Screens ===================== */
+@media (max-width: 480px) {
+  .profile-info p,
+  section p,
+  #contact p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
 }
