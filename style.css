@@ -79,6 +79,7 @@ body {
   border: 4px dashed #b84f00;
   border-radius: 20px;
   margin-bottom: 2rem;
+  margin-left: 1rem
   gap: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -343,4 +344,5 @@ a:hover {
     letter-spacing: normal;
   }
 }
+
 
