@@ -131,7 +131,7 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0;
+  margin-left: 1rem;
 }
 
 .profile-pic {
@@ -344,6 +344,7 @@ a:hover {
     letter-spacing: normal;
   }
 }
+
 
 
 
