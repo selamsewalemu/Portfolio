@@ -156,7 +156,7 @@ section p,
 #contact p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.6;
   text-align: left;
   word-spacing: normal;
   letter-spacing: normal;
@@ -305,3 +305,4 @@ a:hover {
   section p, section li { font-size: 14px; line-height: 1.55; }
   .section-title { font-size: 1.7rem; padding: 0.5rem 1rem; }
 }
+
