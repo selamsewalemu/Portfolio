@@ -5,9 +5,6 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
   text-align: justify;
-  text-justify: inter-word;
-  word-spacing: 2px;
-  letter-spacing: 0.5px;
 }
 
 body {
@@ -85,6 +82,7 @@ body {
   gap: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  word-spacing: normal;
 }
 
 /* Hero Left */
@@ -104,6 +102,8 @@ body {
   color: #2a0c00;
   font-size: 1.15rem;
   line-height: 1.6;
+  word-spacing: normal;
+  letter-spacing: normal;
 }
 
 /* Hero Right / Profile Placement */
@@ -112,10 +112,10 @@ body {
   order: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start; /* left alignment */
   justify-content: center;
   gap: 0;
-  margin-right: auto; 
+  margin-right: auto; /* nearest to left edge */
 }
 
 /* ===================== Profile Section ===================== */
@@ -160,7 +160,7 @@ body {
   color: #111;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 3px;
+  word-spacing: 2px; /* formal spacing */
   letter-spacing: 0.5px;
   margin: 0;
 }
@@ -197,6 +197,9 @@ section p,
 section li {
   font-size: 1.1rem;
   line-height: 1.7;
+  color: #333;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 /* ===================== Contact Section Enhancement ===================== */
@@ -206,7 +209,7 @@ section li {
   line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 3px;
+  word-spacing: 2px;
   letter-spacing: 0.5px;
 }
 
@@ -235,18 +238,34 @@ a:hover {
 
 /* ===================== Animations ===================== */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  0% { opacity: 0; transform: translateX(-100%); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* ===================== Responsive ===================== */
@@ -280,17 +299,19 @@ a:hover {
   .hero-right h3 {
     font-size: 1rem;
     line-height: 1.5;
+    word-spacing: 2px; /* formal spacing for hero */
+    letter-spacing: 0.5px;
   }
 
-  section { padding: 1.2rem; }
-
+  section,
   section p,
   section li,
   #contact p,
   #contact li {
+    padding: 1.2rem;
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: 2px;  /* formal spacing */
+    word-spacing: 2px;
     letter-spacing: 0.5px;
     text-align: justify;
     text-justify: inter-word;
@@ -303,21 +324,20 @@ a:hover {
     min-height: 250px;
     max-height: 400px;
     width: 90%;
-    margin-left: 10px; /* moved slightly closer to left */
+    margin-left: 10px; /* closer to left edge */
     margin-right: auto;
   }
 
   .profile-info p {
     font-size: 1rem;
     line-height: 1.5;
-    word-spacing: 2px;  /* formal spacing */
+    word-spacing: 2px;
     letter-spacing: 0.5px;
     text-align: justify;
     text-justify: inter-word;
   }
 
-  .profile-pic { width: 140px; height: 160px; }
-
   .profile-info h2 { font-size: 1.1rem; }
-}
 
+  .profile-pic { width: 140px; height: 160px; }
+}
