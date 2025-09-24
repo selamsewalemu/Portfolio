@@ -154,8 +154,8 @@ body {
   color: #111;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 1px;
-  letter-spacing: 0.2px;
+  word-spacing: normal;     /* ✅ fixed for Android */
+  letter-spacing: normal;   /* ✅ fixed for Android */
   word-break: break-word;
   overflow-wrap: anywhere;
   margin: 0;
@@ -189,10 +189,10 @@ section p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  text-align: justify;      /* paragraphs stay justified */
+  text-align: justify;
   text-justify: inter-word;
-  word-spacing: 1px;
-  letter-spacing: 0.2px;
+  word-spacing: normal;     /* ✅ no extra spacing */
+  letter-spacing: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
@@ -201,9 +201,9 @@ section li {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #333;
-  text-align: left;        /* ✅ lists left aligned */
+  text-align: left;
   word-spacing: normal;
-  letter-spacing: 0.2px;
+  letter-spacing: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
@@ -218,8 +218,8 @@ ul li {
   line-height: 1.75;
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 1px;
-  letter-spacing: 0.2px;
+  word-spacing: normal;
+  letter-spacing: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
@@ -227,9 +227,9 @@ ul li {
 #contact li {
   font-size: 1.15rem;
   line-height: 1.75;
-  text-align: left;       /* ✅ fix for Android */
+  text-align: left;
   word-spacing: normal;
-  letter-spacing: 0.2px;
+  letter-spacing: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
@@ -309,17 +309,17 @@ a:hover {
     font-size: 1.05rem;
     line-height: 1.6;
     text-align: justify;
-    word-spacing: 1px;
-    letter-spacing: 0.2px;
+    word-spacing: normal;   /* ✅ no wide spacing on Android */
+    letter-spacing: normal;
   }
 
   section li,
   #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
-    text-align: left;    /* ✅ lists normal on Android */
+    text-align: left;
     word-spacing: normal;
-    letter-spacing: 0.2px;
+    letter-spacing: normal;
   }
 
   .profile-wrapper {
@@ -335,6 +335,8 @@ a:hover {
   .profile-info p {
     font-size: 1rem;
     line-height: 1.5;
+    word-spacing: normal;
+    letter-spacing: normal;
   }
 
   .profile-pic { width: 140px; height: 160px; }
