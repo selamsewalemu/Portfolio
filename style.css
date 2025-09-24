@@ -268,13 +268,13 @@ a:hover {
   }
 }
 
-/* ===================== Responsive ===================== */
+/* ===================== Responsive for Android / Mobile ===================== */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
     padding: 1.5rem;
     text-align: center;
-    gap: 2rem; /* increased space between hero-left and hero-right */
+    gap: 2rem; /* more space between hero and profile */
   }
 
   .navbar {
@@ -296,28 +296,24 @@ a:hover {
   .hero-right h1 { font-size: 1.6rem; }
 
   .hero-left h3,
-  .hero-right h3 {
-    font-size: 1rem;
-    line-height: 1.5;
-    word-spacing: 2px;
-    letter-spacing: 0.5px;
-  }
+  .hero-right h3 { font-size: 1rem; line-height: 1.5; }
 
-  section,
+  section { padding: 1.2rem; }
+
   section p,
   section li,
   #contact p,
-  #contact li {
-    padding: 1.2rem;
+  #contact li,
+  .profile-info p {
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: 2px;
-    letter-spacing: 0.5px;
+    word-spacing: normal;        /* reset to normal for Android */
+    letter-spacing: normal;      /* reset letter-spacing */
     text-align: justify;
     text-justify: inter-word;
   }
 
-  /* Profile adjustments */
+  /* Profile rectangle adjustments */
   .profile-wrapper {
     min-width: 180px;
     max-width: 350px;
@@ -328,16 +324,6 @@ a:hover {
     margin-right: auto;
   }
 
-  .profile-info p {
-    font-size: 1rem;
-    line-height: 1.5;
-    word-spacing: 2px;
-    letter-spacing: 0.5px;
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  .profile-info h2 { font-size: 1.1rem; }
-
   .profile-pic { width: 140px; height: 160px; }
+  .profile-info h2 { font-size: 1.1rem; }
 }
