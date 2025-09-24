@@ -286,26 +286,38 @@ a:hover {
 
   section p,
   section li,
-  .profile-info p,
   #contact p,
   #contact li {
     font-size: 1.05rem;
     line-height: 1.6;
-    word-spacing: 4px;  /* increased spacing for Android */
-    letter-spacing: 0.6px; /* slightly larger */
+    word-spacing: 2px;  /* formal spacing */
+    letter-spacing: 0.5px;
     text-align: justify;
     text-justify: inter-word;
   }
 
-  .profile-pic { width: 140px; height: 160px; }
-
+  /* Profile adjustments */
   .profile-wrapper {
     min-width: 180px;
     max-width: 350px;
     min-height: 250px;
     max-height: 400px;
     width: 90%;
+    margin-left: 10px; /* moved slightly closer to left */
+    margin-right: auto;
   }
+
+  .profile-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    word-spacing: 2px;  /* formal spacing */
+    letter-spacing: 0.5px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .profile-pic { width: 140px; height: 160px; }
 
   .profile-info h2 { font-size: 1.1rem; }
 }
+
