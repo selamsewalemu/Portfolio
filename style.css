@@ -87,7 +87,7 @@ body {
 
 .hero-left {
   flex: 1;
-  order: 2;
+  order: 2; /* Default: paragraph second */
 }
 
 .hero-left h1 {
@@ -105,7 +105,7 @@ body {
 
 .hero-right {
   flex: 1;
-  order: 1;
+  order: 1; /* Default: profile image first */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -156,7 +156,7 @@ section p,
 #contact p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: left;
   word-spacing: normal;
   letter-spacing: normal;
@@ -193,7 +193,7 @@ section.active {
   color: #fff;
   padding: 0.7rem 1.3rem;
   border-radius: 12px;
-  font-size: 2.2rem; /* slightly enlarged */
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 0.6rem;
   cursor: pointer;
@@ -216,7 +216,7 @@ section.active {
 /* ===================== List Styling ===================== */
 section li {
   font-size: 1.3rem;
-  line-height: 1.45; /* minimized for experience section */
+  line-height: 1.45;
   color: #333;
   text-align: left;
   word-spacing: normal;
@@ -281,9 +281,25 @@ a:hover {
 
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
-  .hero { flex-direction: column; align-items: center; padding: 1.5rem; }
-  .hero-left, .hero-right { order: unset; text-align: center; }
-  .profile-wrapper { min-width: 180px; max-width: 350px; min-height: 250px; max-height: 400px; width: 90%; margin: 0 auto 1rem auto; }
+  .hero { 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 1.5rem; 
+  }
+
+  /* Fix: image first, paragraph second */
+  .hero-right { order: 1; text-align: center; margin-bottom: 1rem; }
+  .hero-left  { order: 2; text-align: center; }
+
+  .profile-wrapper { 
+    min-width: 180px; 
+    max-width: 350px; 
+    min-height: 250px; 
+    max-height: 400px; 
+    width: 90%; 
+    margin: 0 auto 1rem auto; 
+  }
+
   .profile-pic { width: 140px; height: 160px; }
   .profile-info h2 { font-size: 1.5rem; }
   .hero-left h1 { font-size: 1.9rem; }
@@ -298,6 +314,11 @@ a:hover {
   body { padding: 80px 10px 10px; }
   .navbar h2 { font-size: 1.4rem; }
   .navbar ul { gap: 0.5rem; }
+
+  /* Ensure image first */
+  .hero-right { order: 1; margin-bottom: 0.8rem; }
+  .hero-left  { order: 2; }
+
   .profile-pic { width: 120px; height: 140px; }
   .profile-info h2 { font-size: 1.25rem; }
   .hero-left h1 { font-size: 1.6rem; }
@@ -305,4 +326,3 @@ a:hover {
   section p, section li { font-size: 14px; line-height: 1.55; }
   .section-title { font-size: 1.7rem; padding: 0.5rem 1rem; }
 }
-
