@@ -40,7 +40,7 @@ body {
 }
 
 .navbar h2 {
-  font-size: 2.4rem; /* slightly larger */
+  font-size: 1.8rem; /* medium size */
   color: #062e3f;
   font-weight: bold;
 }
@@ -191,26 +191,26 @@ section.active {
   display: inline-block;
   background: linear-gradient(to right, #ff9a00, #ff6a00);
   color: #fff;
-  padding: 0.7rem 1.3rem;
-  border-radius: 12px;
-  font-size: 2.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.6rem; /* medium size */
   font-weight: bold;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .section-title:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   background: linear-gradient(to right, #ff6a00, #ff9a00);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
 .section-title:active {
   transform: translateY(0);
   background: linear-gradient(to right, #ff4500, #ff8c00);
-  box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
 }
 
 /* ===================== List Styling ===================== */
@@ -304,15 +304,19 @@ a:hover {
   .profile-info h2 { font-size: 1.5rem; }
   .hero-left h1 { font-size: 1.9rem; }
   .hero-left h3 { font-size: 1.15rem; line-height: 1.45; }
+
+  /* Medium titles on tablets */
+  .navbar h2 { font-size: 1.5rem; }
+  .section-title { font-size: 1.4rem; padding: 0.4rem 0.9rem; }
+
   section { padding: 1.2rem; }
   section p { font-size: 1.15rem; line-height: 1.6; }
   section li { font-size: 1.15rem; line-height: 1.4; }
-  .section-title { font-size: 1.9rem; padding: 0.6rem 1.2rem; }
 }
 
 @media (max-width: 480px) {
   body { padding: 80px 10px 10px; }
-  .navbar h2 { font-size: 1.4rem; }
+  .navbar h2 { font-size: 1.3rem; }   /* compact for phones */
   .navbar ul { gap: 0.5rem; }
 
   /* Ensure image first */
@@ -323,6 +327,9 @@ a:hover {
   .profile-info h2 { font-size: 1.25rem; }
   .hero-left h1 { font-size: 1.6rem; }
   .hero-left h3 { font-size: 1rem; }
+
+  /* Compact section titles */
+  .section-title { font-size: 1.2rem; padding: 0.3rem 0.8rem; }
+
   section p, section li { font-size: 14px; line-height: 1.55; }
-  .section-title { font-size: 1.7rem; padding: 0.5rem 1rem; }
 }
