@@ -85,9 +85,10 @@ body {
   transition: all 0.3s ease;
 }
 
+/* ✅ Swapped order */
 .hero-left {
   flex: 1;
-  order: 2; /* Default: paragraph second */
+  order: 1; /* paragraph first */
 }
 
 .hero-left h1 {
@@ -105,7 +106,7 @@ body {
 
 .hero-right {
   flex: 1;
-  order: 1; /* Default: profile image first */
+  order: 2; /* profile image second */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -287,9 +288,9 @@ a:hover {
     padding: 1.5rem; 
   }
 
-  /* Fix: image first, paragraph second */
-  .hero-right { order: 1; text-align: center; margin-bottom: 1rem; }
-  .hero-left  { order: 2; text-align: center; }
+  /* ✅ Ensure paragraph first, image second */
+  .hero-left  { order: 1; text-align: center; margin-bottom: 1rem; }
+  .hero-right { order: 2; text-align: center; }
 
   .profile-wrapper { 
     min-width: 180px; 
@@ -305,7 +306,6 @@ a:hover {
   .hero-left h1 { font-size: 1.9rem; }
   .hero-left h3 { font-size: 1.15rem; line-height: 1.45; }
 
-  /* Medium titles on tablets */
   .navbar h2 { font-size: 1.5rem; }
   .section-title { font-size: 1.4rem; padding: 0.4rem 0.9rem; }
 
@@ -316,20 +316,18 @@ a:hover {
 
 @media (max-width: 480px) {
   body { padding: 80px 10px 10px; }
-  .navbar h2 { font-size: 1.3rem; }   /* compact for phones */
+  .navbar h2 { font-size: 1.3rem; }
   .navbar ul { gap: 0.5rem; }
 
-  /* Ensure image first */
-  .hero-right { order: 1; margin-bottom: 0.8rem; }
-  .hero-left  { order: 2; }
+  /* ✅ Paragraph first, image second */
+  .hero-left  { order: 1; margin-bottom: 0.8rem; }
+  .hero-right { order: 2; }
 
   .profile-pic { width: 120px; height: 140px; }
   .profile-info h2 { font-size: 1.25rem; }
   .hero-left h1 { font-size: 1.6rem; }
   .hero-left h3 { font-size: 1rem; }
 
-  /* Compact section titles */
   .section-title { font-size: 1.2rem; padding: 0.3rem 0.8rem; }
-
   section p, section li { font-size: 14px; line-height: 1.55; }
 }
