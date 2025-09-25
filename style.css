@@ -17,7 +17,7 @@ body {
   transition: all 0.4s ease-in-out;
   scroll-behavior: smooth;
   line-height: 1.75;
-  font-size: 1.18rem; /* slightly enlarged paragraphs */
+  font-size: 1.18rem;
 }
 
 /* ===================== Navbar ===================== */
@@ -29,18 +29,17 @@ body {
   width: 100%;
   max-width: 1000px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #00e0ff, #00c2cb);
-  padding: 1.2rem 2rem;
+  padding: 0.6rem 1rem;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   z-index: 999;
 }
 
 .navbar h2 {
-  font-size: 1.8rem; /* medium size */
+  font-size: 1.9rem;
   color: #062e3f;
   font-weight: bold;
 }
@@ -50,24 +49,30 @@ body {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 .navbar a {
   text-decoration: none;
   color: #062e3f;
   font-weight: bold;
+  font-style: italic;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   cursor: pointer;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
   color: #ffffff;
   border-bottom: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* ===================== Hero Section ===================== */
@@ -85,10 +90,10 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ✅ Swapped order */
+/* ✅ Desktop: paragraph first, image second */
 .hero-left {
   flex: 1;
-  order: 1; /* paragraph first */
+  order: 1;
 }
 
 .hero-left h1 {
@@ -106,13 +111,11 @@ body {
 
 .hero-right {
   flex: 1;
-  order: 2; /* profile image second */
+  order: 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 0;
-  margin-right: auto;
 }
 
 /* ===================== Profile Section ===================== */
@@ -132,7 +135,6 @@ body {
   min-height: 300px;
   max-height: 450px;
   width: 100%;
-  margin-left: 0;
 }
 
 .profile-pic {
@@ -155,18 +157,11 @@ body {
 .profile-info p,
 section p,
 #contact p {
-  font-family: 'Times New Roman', Times, serif;
   font-size: 1.2rem;
   line-height: 1.8;
   text-align: left;
   word-spacing: normal;
   letter-spacing: normal;
-  text-justify: auto;
-  hyphens: auto;
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  word-break: break-word;
-  overflow-wrap: anywhere;
   margin: 0.6rem 0;
 }
 
@@ -194,7 +189,7 @@ section.active {
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 10px;
-  font-size: 1.6rem; /* medium size */
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.8rem;
   cursor: pointer;
@@ -205,40 +200,22 @@ section.active {
 .section-title:hover {
   transform: translateY(-3px);
   background: linear-gradient(to right, #ff6a00, #ff9a00);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
 }
 
 .section-title:active {
   transform: translateY(0);
   background: linear-gradient(to right, #ff4500, #ff8c00);
-  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
 }
 
 /* ===================== List Styling ===================== */
 section li {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.45;
   color: #333;
-  text-align: left;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
 }
 
 ul li {
   margin-bottom: 0.7rem;
-}
-
-/* ===================== Contact Section Enhancement ===================== */
-#contact li {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: left;
-  word-spacing: normal;
-  letter-spacing: normal;
-  word-break: break-word;
-  overflow-wrap: anywhere;
 }
 
 /* ===================== Footer ===================== */
@@ -282,36 +259,21 @@ a:hover {
 
 /* ===================== Responsive ===================== */
 @media (max-width: 768px) {
-  .hero { 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 1.5rem; 
+  .hero {
+    flex-direction: column;
+    padding: 1.5rem;
   }
 
-  /* ✅ Ensure paragraph first, image second */
-  .hero-left  { order: 1; text-align: center; margin-bottom: 1rem; }
-  .hero-right { order: 2; text-align: center; }
+  /* ✅ Android: image first, paragraph second */
+  .hero-right { order: 1; text-align: center; margin-bottom: 1rem; }
+  .hero-left  { order: 2; text-align: center; }
 
-  .profile-wrapper { 
-    min-width: 180px; 
-    max-width: 350px; 
-    min-height: 250px; 
-    max-height: 400px; 
-    width: 90%; 
-    margin: 0 auto 1rem auto; 
-  }
-
+  .profile-wrapper { width: 90%; margin: 0 auto 1rem auto; }
   .profile-pic { width: 140px; height: 160px; }
   .profile-info h2 { font-size: 1.5rem; }
-  .hero-left h1 { font-size: 1.9rem; }
-  .hero-left h3 { font-size: 1.15rem; line-height: 1.45; }
 
   .navbar h2 { font-size: 1.5rem; }
-  .section-title { font-size: 1.4rem; padding: 0.4rem 0.9rem; }
-
-  section { padding: 1.2rem; }
-  section p { font-size: 1.15rem; line-height: 1.6; }
-  section li { font-size: 1.15rem; line-height: 1.4; }
+  .section-title { font-size: 1.3rem; padding: 0.4rem 0.9rem; }
 }
 
 @media (max-width: 480px) {
@@ -319,15 +281,11 @@ a:hover {
   .navbar h2 { font-size: 1.3rem; }
   .navbar ul { gap: 0.5rem; }
 
-  /* ✅ Paragraph first, image second */
-  .hero-left  { order: 1; margin-bottom: 0.8rem; }
-  .hero-right { order: 2; }
-
   .profile-pic { width: 120px; height: 140px; }
   .profile-info h2 { font-size: 1.25rem; }
   .hero-left h1 { font-size: 1.6rem; }
   .hero-left h3 { font-size: 1rem; }
 
-  .section-title { font-size: 1.2rem; padding: 0.3rem 0.8rem; }
-  section p, section li { font-size: 14px; line-height: 1.55; }
+  .section-title { font-size: 1.15rem; padding: 0.3rem 0.8rem; }
+  section p, section li { font-size: 14px; }
 }
